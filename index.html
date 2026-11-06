@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Canteen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">Smart<span>Canteen</span></div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Open cart">
+      Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Skip the queue.<br>Order ahead, pick up hot.</h1>
+      <p>Pre-order your meal from your phone, choose a pickup slot, and collect it with your token number.</p>
+      <a href="#menu" class="btn">View menu</a>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <h2>Today's menu</h2>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="menuGrid"></div>
+  </section>
+
+  <section id="how" class="section alt">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step"><span>1</span><h3>Pick your food</h3><p>Browse the menu and add items to your cart.</p></div>
+      <div class="step"><span>2</span><h3>Choose a slot</h3><p>Select a pickup time that suits your break.</p></div>
+      <div class="step"><span>3</span><h3>Get your token</h3><p>Place the order and receive a token number.</p></div>
+      <div class="step"><span>4</span><h3>Collect and enjoy</h3><p>Show your token at the counter. No waiting.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Canteen timings: 8:00 AM to 5:00 PM, Monday to Saturday.</p>
+    <p>Email: canteen@example.com &nbsp;|&nbsp; Phone: +91 00000 00000</p>
+  </section>
+
+  <footer>&copy; 2026 Smart Canteen. All rights reserved.</footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Your cart">
+    <div class="drawer-head">
+      <h3>Your order</h3>
+      <button id="closeCart" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-foot">
+      <label for="slot">Pickup time</label>
+      <select id="slot"></select>
+      <div class="total-row"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button class="btn full" id="placeOrder">Place order</button>
+      <p class="error" id="cartError"></p>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <h3>Order placed</h3>
+      <p>Your token number</p>
+      <div class="token" id="tokenNo">--</div>
+      <p id="tokenInfo"></p>
+      <button class="btn" id="closeModal">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
